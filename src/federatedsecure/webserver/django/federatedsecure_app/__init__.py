@@ -1,3 +1,3 @@
-from federatedsecure.server.server.bus import Bus
+from federatedsecure.server.bus import Bus
 
 federatedsecure_bus = Bus()

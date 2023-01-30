@@ -4,7 +4,7 @@ import json
 
 
 import federatedsecure.webserver.django.federatedsecure_app
-from federatedsecure.server.server.exceptions import handle_exception
+from federatedsecure.server.exceptions import handle_exception
 
 
 @csrf_exempt
