@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import federatedsecure.webserver.django.federatedsecure_app.federatedsecure_app
+
+import federatedsecure_app.federatedsecure_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('representations', federatedsecure.webserver.django.federatedsecure_app.federatedsecure_app.path_representations),
-    path('representation/<uuid:uuid>', federatedsecure.webserver.django.federatedsecure_app.federatedsecure_app.path_representation_uuid),
-    path('representation/<uuid:uuid>/<str:name>', federatedsecure.webserver.django.federatedsecure_app.federatedsecure_app.path_representation_uuid_name),
+    path('representations', federatedsecure_app.federatedsecure_app.path_representations),
+    path('representation/<uuid:uuid>', federatedsecure_app.federatedsecure_app.path_representation_uuid),
+    path('representation/<uuid:uuid>/<str:name>', federatedsecure_app.federatedsecure_app.path_representation_uuid_name),
 ]

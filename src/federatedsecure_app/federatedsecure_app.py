@@ -2,10 +2,8 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
 
-
-import federatedsecure.webserver.django.federatedsecure_app
 from federatedsecure.server.exceptions import handle_exception
-
+from federatedsecure_app import federatedsecure_bus
 
 @csrf_exempt
 def path_representations(request):
@@ -38,7 +36,7 @@ def path_representation_uuid_name(request, uuid, name):
 
 def get_bus():
     """get the singleton bus of the server application"""
-    return federatedsecure.webserver.django.federatedsecure_app.federatedsecure_bus
+    return federatedsecure_bus
 
 
 def list_representations():
